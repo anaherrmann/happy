@@ -24,6 +24,7 @@
     "prettier"
   ],
   "rules": {
+    "import/no-unresolved": "off",
     "no-underscore-dangle": "off",
     "prettier/prettier": "error",
     "class-methods-use-this": "off",
@@ -32,7 +33,7 @@
       "argsIgnorePattern": "_"
     }],
     "import/extensions": [
-      "error",
+      "warn",
       "ignorePackages",
       {
         "ts": "never"
@@ -41,7 +42,9 @@
   },
   "settings": {
     "import/resolver": {
-      "typescript": {}
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
     }
   }
 }
